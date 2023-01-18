@@ -123,7 +123,9 @@ class MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            ElevatedButton(onPressed: (){
+            ElevatedButton(
+              key: const Key('SecondPageButton'),
+                onPressed: (){
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const SecondPage()),
@@ -137,6 +139,7 @@ class MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        key: const Key("IncrementCounter"),
         onPressed: (){
           incrementCounter();
           // sendData();
